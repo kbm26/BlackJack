@@ -1,11 +1,10 @@
 {
-  {
     "name": "chai",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
-      "test": "mocha test/PlayerTests"
+      "test": "mocha test/cards_test"
     },
     "keywords": [],
     "author": "",
@@ -16,4 +15,3 @@
       "save-dev": "^0.0.1-security"
     }
   }
-}
