@@ -1,2 +1,3 @@
 # BlackJack
-A simple JavaScript game of BlackJack
+A WebGame of BlackJack
+
