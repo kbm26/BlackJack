@@ -13,8 +13,31 @@ class GameManager{
     }
 
 
-        // main game loop goes here . . .
+    deal_initial_cards(){
+        this.dealer.dealCard(this.deck, this.user_player);
+        this.dealer.dealCard(this.deck, this.dealer);
+        this.dealer.dealCard(this.deck, this.user_player);
+        this.dealer.dealCard(this.deck, this.dealer);
+    }
+
+
+    start_game(){
+        this.deal_initial_cards()
+        while(!this.user_player.isTurnOver() && this.user_player.getTotalValueOfHand() < 22){
+            this.dealer.dealCard(this.deck, this.user_player);
+        }
+        // console.log(this.dealer.hand)
+        // console.log("______________________________________________")
+        // console.log(this.user_player.hand)
+    }
+
+
+
+    
 
 
 
 }
+
+// gh = new GameManager();
+// gh.start_game()

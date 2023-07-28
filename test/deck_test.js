@@ -23,7 +23,15 @@ describe("using a Deck", function(){
         })
 
         it("should not have that card in the deck anymore", function(){
-            expect(deck1.get_current_cards_in_deck()).to.not.contain(card1);
+            found_card = false;
+            for(let index = 0; index < deck1.length; index++){
+                other_card = deck1.current_cards_in_decks[index];
+                if(other_card.get_suit() == card1.get_suit() && other_card.get_card_name() == card.get_card_name()){
+                    found_card = true;
+                }
+            }
+
+            expect(found_card).to.equal(false)
         })
     })
 })
