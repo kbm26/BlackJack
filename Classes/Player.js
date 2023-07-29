@@ -66,6 +66,9 @@ class Dealer extends Player{
 
     showHand(){
         //Show a single card to the player
+        this.hand.forEach(element => {
+            console.log(element)
+        });
     }
 
     getName(){
@@ -77,6 +80,7 @@ class Dealer extends Player{
         this.card = deck.take_card();
         player.hit(this.card);
         console.log(`${this.card.get_card_name()} of ${this.card.get_suit()} was removed from the Deck\nThere are ${deck.get_card_count()} Cards in the Deck`);
+        alert(`${this.card.get_card_name()}${this.card.get_suit()}`)
     }
 
 }
