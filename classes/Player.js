@@ -17,6 +17,10 @@ class Player{
         alert("hahahaha")
     }
 
+    resetHand(){
+        this.hand = []
+    }
+
     getTotalValueOfHand(){
         this.totalValueOfHand = 0;
         this.hand.forEach(card =>{
@@ -99,6 +103,7 @@ class Dealer extends Player{
         console.log(`${this.card.get_card_name()} of ${this.card.get_suit()} was removed from the Deck\nThere are ${deck.get_card_count()} Cards in the Deck`);
         alert(`${this.card.get_card_name()}${this.card.get_suit()}`)
     }
+
 
 }
 

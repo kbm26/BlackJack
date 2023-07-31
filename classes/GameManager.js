@@ -13,6 +13,9 @@ const chipTen = document.getElementById('10')
 const chipTwenty = document.getElementById('20')
 const chipFifty = document.getElementById('50')
 const chipHundred = document.getElementById('100')
+const playerHand = document.getElementById('playerHand')
+const dealerHand = document.getElementById('dealerHand')
+
 
 
 
@@ -31,8 +34,11 @@ function kyle(){
 function deal_initial_cards(){
     dealer.dealCard(deck, user_player);
     dealer.dealCard(deck, dealer);
+    dealerHand.textContent = dealer.getTotalValueOfHand()
     dealer.dealCard(deck, user_player);
     dealer.dealCard(deck, dealer);
+    playerHand.textContent = user_player.getTotalValueOfHand();
+
 }
 
 function dealerTurn(){
@@ -42,7 +48,8 @@ function dealerTurn(){
         dealer.dealCard(deck,dealer)
         console.log(dealer.getTotalValueOfHand())
     }
-    alert("i broke")
+    dealerHand.textContent = dealer.getTotalValueOfHand()
+
 }
 
 function result(){
@@ -67,6 +74,11 @@ function GameReset(){
     hitButton.disabled=true
     standButton.disabled=true
     user_player.setPot(0)
+    user_player.resetHand()
+    dealer.resetHand()
+    playerHand.textContent = user_player.getTotalValueOfHand();
+    dealerHand.textContent = dealer.getTotalValueOfHand();
+
 }
 
 function Game(){
@@ -100,7 +112,7 @@ betButton.addEventListener('click',Game)
 
 hitButton.addEventListener('click',()=>{
     dealer.dealCard(deck,user_player)
-
+    playerHand.textContent = user_player.getTotalValueOfHand();
     if(user_player.getTotalValueOfHand()>21){
         alert("BUST")
         GameReset()
