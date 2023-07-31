@@ -5,32 +5,121 @@ const UserPlayer = require('../classes/Player').UserPlayer;
 
 
 const hitButton = document.getElementById('hitButton')
+const betButton = document.getElementById('betButton')
+const standButton = document.getElementById('standButton')
+const bankAmount = document.getElementById('bankAmount')
+const pot = document.getElementById('pot')
+const chipTen = document.getElementById('10')
+const chipTwenty = document.getElementById('20')
+const chipFifty = document.getElementById('50')
+const chipHundred = document.getElementById('100')
+
+
 
 const dealer = new Dealer();
 const user_player = new UserPlayer("UNNAMED")
 const deck = new Deck();
 
+bankAmount.textContent = user_player.getBalance()
+pot.textContent = user_player.getTotalValueOfHand()
+
+
 function kyle(){
     alert("i work")
 }
+
 function deal_initial_cards(){
     dealer.dealCard(deck, user_player);
     dealer.dealCard(deck, dealer);
     dealer.dealCard(deck, user_player);
     dealer.dealCard(deck, dealer);
 }
-    
 
-function start_game(){
-        this.deal_initial_cards()
-        while(!this.user_player.isTurnOver() && this.user_player.getTotalValueOfHand() < 22){
-            this.dealer.dealCard(this.deck, this.user_player);
-        }
-        this.dealer.showHand();
-        console.log("______________________________________________")
-        console.log(this.user_player.hand)
+function dealerTurn(){
+    alert("im going to break")
+
+    while(dealer.getTotalValueOfHand()<17){
+        dealer.dealCard(deck,dealer)
+        console.log(dealer.getTotalValueOfHand())
+    }
+    alert("i broke")
+}
+
+function result(){
+    if(user_player.getTotalValueOfHand()>dealer.getTotalValueOfHand()){
+        alert("YOU WON")
+    }
+    else if(user_player.getTotalValueOfHand()==dealer.getTotalValueOfHand()){
+        alert("PUSH")
+    }
+    else{
+        alert("YOU LOST")
+    }
+    GameReset()
+}
+
+function GameReset(){
+    betButton.disabled= false
+    chipTen.disabled=false
+    chipTwenty.disabled=false
+    chipFifty.disabled=false
+    chipHundred.disabled=false
+    hitButton.disabled=true
+    standButton.disabled=true
+    user_player.setPot(0)
+}
+
+function Game(){
+    betButton.disabled= true
+    chipTen.disabled=true
+    chipTwenty.disabled=true
+    chipFifty.disabled=true
+    chipHundred.disabled=true
+    deal_initial_cards()
+    hitButton.disabled=false
+    standButton.disabled=false
+
 }
 
 
-alert("update done")
-hitButton.addEventListener('click',kyle)//dealer.dealCard(deck,user_player))
+
+function MakeBet(num){
+    user_player.bet(num)
+    bankAmount.textContent = user_player.getBalance()
+    pot.textContent= user_player.getPot()
+}
+
+
+standButton.addEventListener('click',()=>{
+    user_player.stand();
+    dealerTurn()
+    result()
+})
+
+betButton.addEventListener('click',Game)
+
+hitButton.addEventListener('click',()=>{
+    dealer.dealCard(deck,user_player)
+
+    if(user_player.getTotalValueOfHand()>21){
+        alert("BUST")
+        GameReset()
+    }
+    
+
+})
+chipTen.addEventListener('click',()=>{
+    MakeBet(10)
+})
+
+chipTwenty.addEventListener('click',()=>{
+    MakeBet(20)
+})
+
+chipFifty.addEventListener('click',()=>{    
+    MakeBet(50)
+})
+
+chipHundred.addEventListener('click',()=>{
+    MakeBet(100)
+})

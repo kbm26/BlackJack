@@ -1,5 +1,5 @@
 const { assert } = require('chai');
-const { Dealer, UserPlayer } = require('../../Classes/Player');
+const { Dealer, UserPlayer } = require('../../classes/Player');
 const Deck = require('../../classes/Deck').Deck;
 const Card = require('../../classes/Card').Card;
 

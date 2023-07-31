@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlackJack</title>
+    <link rel="StyleSheet" href="style.css">
     <script type="module" src="../dist/bundle.js" ></script>
 
 </head>
 <body>
-    <button id="hitButton">HITBUTTON</button>
+    <button id="hitButton" disabled>HITBUTTON</button>
+    <button id="standButton" disabled>STANDBUTTON</button>
+    <button id="betButton">BETBUTTON</button>
+    <button id="10">10 </button>
+    <button id="20">20 </button>
+    <button id="50">50 </button>
+    <button id="100">100 </button>
+    <p1>
+        Bank: <var id="bankAmount"></var>
+    </p1> 
+    <p1>
+        Pot: <var id="pot"></var>
+    </p1>
 </body>
 </html>
