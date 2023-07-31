@@ -12,3 +12,232 @@
     border: 1px solid red;
     height: 50vh;
 }
+
+#card-deck-container{
+    width: 10%;
+    position: relative;
+}
+
+#card-deck-image-1{
+    width: 100%;
+    
+}
+
+#card-deck-image-2{
+    width: 100%;
+    position: absolute;
+    top: 0.5vw;
+    left: 0;
+}
+
+#card-deck-image-3{
+    width: 100%;
+    position: absolute;
+    top: 1vw;
+    left: 0;
+}
+
+#card-deck-image-4{
+    width: 100%;
+    position: absolute;
+    top: 1.5vw;
+    left: 0;
+}
+
+#card-deck-image-5{
+    width: 100%;
+    position: absolute;
+    top: 2vw;
+    left: 0;
+}
+
+#card-deck-image-6{
+    width: 100%;
+    position: absolute;
+    top: 2.5vw;
+    left: 0;
+    box-shadow: 6px 6px 10px black;
+    transition: transform 450ms;
+}
+
+#card-deck-image-6:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#player-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+}
+
+#player-bet{
+    border: 1px solid yellow;
+    width: 100%;
+    position: relative;
+}
+
+#player-hand-container{
+    border: 1px solid blue;
+    width: 100%;
+    position: relative;
+}
+
+#player-cash{
+    border: 1px solid white;
+    width: 100%;
+    position: relative;
+}
+
+.player-cards{
+    width: 35%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+@keyframes dealing_card_1 {
+    0%{transform: translate(-335%, -150%) };
+    50%{transform: translate(-335%, -100%) };
+    100%{transform: translate(0, 0); opacity: 1; transform: rotate(-30deg);};
+    
+}
+@keyframes dealing_card_2 {
+    0%{transform: translate(-350%, -150%)};
+    50%{transform: translate(-350%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1;transform: rotate(-27deg);};
+    
+}
+@keyframes dealing_card_3 {
+    0%{transform: translate(-365%, -160%)};
+    50%{transform: translate(-365%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1; transform: rotate(-24deg);};
+    
+}
+@keyframes dealing_card_4 {
+    0%{transform: translate(-380%, -190%)};
+    50%{transform: translate(-380%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1; transform: rotate(-21deg);}; 
+}
+@keyframes dealing_card_5 {
+    0%{transform: translate(-395%, -190%)};
+    50%{transform: translate(-395%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1; transform: rotate(-18deg);}; 
+}
+@keyframes dealing_card_6 {
+    0%{transform: translate(-420%, -190%)};
+    50%{transform: translate(-420%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1;}; 
+}
+@keyframes dealing_card_7 {
+    0%{transform: translate(-450%, -170%)};
+    50%{transform: translate(-450%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1; transform: rotate(9deg);}; 
+}
+@keyframes dealing_card_8 {
+    0%{transform: translate(-465%, -150%)};
+    50%{transform: translate(-465%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1; transform: rotate(12deg);}; 
+}
+@keyframes dealing_card_9 {
+    0%{transform: translate(-480%, -150%)};
+    50%{transform: translate(-480%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1; transform: rotate(15deg);}; 
+}
+@keyframes dealing_card_10 {
+    0%{transform: translate(-495%, -150%)};
+    50%{transform: translate(-495%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1; transform: rotate(18deg);}; 
+}
+#dealt-card-1{
+    animation: dealing_card_1 forwards 1s ease-in-out;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    z-index: 1;
+    
+}
+
+#dealt-card-2{
+    animation: dealing_card_2 forwards 1s ease-in-out;
+    width: 35%;
+    position: absolute;
+    top: -1.5vw;
+    left: 5%;
+    z-index: 1;
+}
+
+#dealt-card-3{
+    animation: dealing_card_3 forwards 1s ease-in-out;
+    width: 35%;
+    position: absolute;
+    top: -3vw;
+    left: 10%;
+    z-index: 1;
+}
+
+#dealt-card-4{
+    animation: dealing_card_4 forwards 1s ease-in-out;
+    width: 35%;
+    position: absolute;
+    top: -4.5vw;
+    left: 15%;
+    z-index: 1;
+}
+
+#dealt-card-5{
+    animation: dealing_card_5 forwards 1s ease-in-out;
+    width: 35%;
+    position: absolute;
+    top: -6vw;
+    left: 20%;
+    z-index: 1;
+}
+
+#dealt-card-6{
+    animation: dealing_card_6 forwards 1s ease-in-out;
+    width: 35%;
+    position: absolute;
+    top: -6vw;
+    left: 30%;
+    z-index: 1;
+}
+
+#dealt-card-7{
+    animation: dealing_card_7 forwards 1s ease-in-out;
+    width: 35%;
+    position: absolute;
+    top: -4.5vw;
+    left: 40%;
+    z-index: 1;
+    transform: rotate(9deg);
+}
+
+#dealt-card-8{
+    animation: dealing_card_8 forwards 1s ease-in-out;
+    width: 35%;
+    position: absolute;
+    top: -3vw;
+    left: 45%;
+    z-index: 1;
+}
+
+#dealt-card-9{
+    animation: dealing_card_9 forwards 1s ease-in-out;
+    width: 35%;
+    position: absolute;
+    top: -1.5vw;
+    left: 50%;
+    z-index: 1;
+}
+
+#dealt-card-10{
+    animation: dealing_card_10 forwards 1s ease-in-out;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 55%;
+    z-index: 1;
+}

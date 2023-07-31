@@ -1,8 +1,8 @@
 const Card = require('../classes/Card').Card;
 const Deck = require('../classes/Deck').Deck;
-const Dealer = require('../classes/Player').Dealer;
-const UserPlayer = require('../classes/Player').UserPlayer;
-
+const Dealer = require('../Classes/Player').Dealer;
+const UserPlayer = require('../Classes/Player').UserPlayer;
+const addCard = require('../classes/card_animations').add_card;
 
 const hitButton = document.getElementById('hitButton')
 
@@ -32,5 +32,6 @@ function start_game(){
 }
 
 
-alert("update done")
+// alert("update done")
 hitButton.addEventListener('click',kyle)//dealer.dealCard(deck,user_player))
+player_hand_container.addEventListener("click", add_card);
