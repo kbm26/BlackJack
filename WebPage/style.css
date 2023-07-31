@@ -1,14 +1,22 @@
 body{
     background-image: url("../assets/background.jpg");
 }
+*{
+    margin: 0;
+    padding: 0;
+}
 
-#bet10:hover{
-    /* width: 100px;
-    height: 100px; 
-    border-radius: 50%; 
-    background-image: url('../assets/bet10.png'); 
-    background-size: cover;
-    background-position: center center;
-    border: none; */
+
+
+.chip:hover{
     cursor: pointer;
-  }
+}
+
+.btn{
+    background-color: transparent;
+    border: solid;
+    border-radius: 50%;
+    border-color: black;
+    padding: 0;
+}
+
