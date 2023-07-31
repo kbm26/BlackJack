@@ -20,7 +20,9 @@ class Deck{
         if(this.get_card_count() == 0){
             return null;
         }
-        return this.current_cards_in_decks.pop();
+        let random_index = Math.trunc(Math.random() * this.get_card_count());
+        this.current_cards_in_decks = this.current_cards_in_decks.filter(card => this.current_cards_in_decks[random_index] != card);
+        return this.current_cards_in_decks[random_index] 
     }
 
     create_deck(){
