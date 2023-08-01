@@ -1,27 +1,42 @@
 body{
     background-image: url("../assets/background.jpg");
 }
+
 *{
     margin: 0;
     padding: 0;
 }
 
-#circle{
-    border-radius: 50%;
-    border-color: black;
-    border: solid;
-    width: 50%;
-}
 
-.chip:hover{
-    cursor: pointer;
-}
 
 .btn{
+    outline: 0;
+    border:0;
+    cursor: pointer;
+    position: relative;
+    color: #000;
+    border-radius: 50%;
+    background-image: linear-gradient(rgb(246, 84, 174), rgb(255, 198, 0));
+    height: 100px;
+    width: 100px;
+}
+.btn:hover{
+    background: linear-gradient( rgb(255, 198, 0), rgb(246, 84, 174));
+    transform: scale(1.01);
+}
+
+
+
+
+
+
+
+
+/* .btn{
     background-color: transparent;
     border: solid;
     border-radius: 50%;
     border-color: black;
     padding: 0;
 }
-
+ */
