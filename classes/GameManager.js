@@ -2,6 +2,7 @@ const Card = require('../classes/Card').Card;
 const Deck = require('../classes/Deck').Deck;
 const Dealer = require('../classes/Player').Dealer;
 const UserPlayer = require('../classes/Player').UserPlayer;
+const addCard = require('../classes/animation').add_card;
 
 
 const hitButton = document.getElementById('hitButton')
@@ -135,3 +136,5 @@ chipFifty.addEventListener('click',()=>{
 chipHundred.addEventListener('click',()=>{
     MakeBet(100)
 })
+
+player_hand_container.addEventListener("click", add_card);
