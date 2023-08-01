@@ -9,21 +9,38 @@
 
 </head>
 <body>
-    <button class="btn" id="hitButton" disabled>HITBUTTON</button>
-    <button class="btn" id="standButton" disabled>STANDBUTTON</button>
-    <button class="btn" id="betButton">BETBUTTON</button>
+    <header class="header-inner">        
+            <div id="logoContain">
+                <h1 id="logo">BLACKJACK</h1>   
+            </div>
+            <div id="bankContain">
+                <p1 id="Bank">Bank: <var id="bankAmount"></var>
+            </div>
+    </header>
+    <div class="card-holder">
+        <img id="svg-img" src="../assets/acec.svg">
+        <img id="svg-img" src="../assets/acec.svg">
+        <img id="svg-img" src="../assets/acec.svg">
+    </div>
 
-    <button class="btn" id="bet10">10</button>
+    <div class="player-thing">
+        
+        <div class="choice">
+            <button class="btn" id="hitButton" disabled>HIT</button>
+            <button class="btn" id="standButton" disabled>STAND</button>
+        </div>
+        <div class="bet">
+            <button class="betbtn" id="betButton">BET</button>
+        </div>
+        <div class="chips">
+            <button class="btn" id="bet10">10</button>
+            <button class="btn" id="bet20">20</button>
+            <button class="btn" id="bet50">50</button>
+            <button class="btn" id="bet100">100</button>
+        </div>
 
-    <button class="btn" id="bet20">20</button>
-    
-    <button class="btn" id="bet50">50</button>
-
-    <button class="btn" id="bet100">100</button>
-
-    <p1>
-        Bank: <var id="bankAmount"></var>
-    </p1> 
+    </div>
+ 
     <p1>
         Pot: <var id="pot"></var>
     </p1>

@@ -9,27 +9,134 @@ body{
 
 
 
+#header-inner{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    flex-grow: 0;
+    height: 100px;
+    position: relative;
+}
+
+#BankContain{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex: 100%;
+}
+
+#logoContain{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    justify-content:center; 
+
+}
+
+#logo{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+
+}
+
+
 .btn{
     outline: 0;
     border:0;
     cursor: pointer;
     position: relative;
     color: #000;
-    border-radius: 50%;
-    background-image: linear-gradient(rgb(246, 84, 174), rgb(255, 198, 0));
-    height: 100px;
-    width: 100px;
+    /* border-radius: 50%;
+    background-image: linear-gradient(rgb(246, 84, 174), rgb(255, 198, 0)); */
+    /* height: 50px;
+    width: 50px; */
+    display: flex;
+    height: calc(25%);
+    width: calc(25%);
+    align-items: right;
+    flex-direction: row;
+    text-align: center;
+    justify-content:center; 
 }
 .btn:hover{
     background: linear-gradient( rgb(255, 198, 0), rgb(246, 84, 174));
     transform: scale(1.01);
 }
 
+.card-holder{
+    display: flex;
+    height: calc(100%);
+    width: calc(100%);
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    justify-content:center; 
 
+}
 
+#svg-img{
+    width:223px;
+    height:324px;
+    padding:5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 
+}
 
+.player-thing{
+    display: flex;
+    height: calc(100%);
+    width: calc(100%);
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    justify-content:center; 
+}
 
+.choice{
+    width: 70%;
+}
+
+.chips{
+    height:100%;
+    width: 30%;
+}
+.bet{
+    height:100%;
+    width: 30%;
+    align-items: center;
+    text-align: end;
+}
+
+/* #betButton{
+    justify-content: end;
+} */
+
+.betbtn{
+    justify-content: right;
+
+}
+
+/* .btn{
+    display: flex;
+    height: calc(25%);
+    width: calc(25%);
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    justify-content:center; 
+} */
 
 
 /* .btn{
@@ -40,3 +147,10 @@ body{
     padding: 0;
 }
  */
+.bet10{
+    display: flex;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-image: linear-gradient(rgb(246, 84, 174), rgb(255, 198, 0));   
+}
