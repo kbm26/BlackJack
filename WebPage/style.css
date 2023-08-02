@@ -1,0 +1,390 @@
+body{
+    background-image: url("../assets/background.jpg");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#header-inner{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    flex-grow: 0;
+    height: 100px;
+    position: relative;
+}
+
+#BankContain{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex: 100%;
+}
+
+#logoContain{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    justify-content:center; 
+
+}
+
+#logo{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+
+}
+
+
+.btn{
+    outline: 0;
+    border:0;
+    cursor: pointer;
+    position: relative;
+    color: #000;
+    border-radius: 40%;
+    background-image: linear-gradient(rgb(246, 84, 174), rgb(255, 198, 0)); 
+    height: 50px;
+    width: 50px;
+    display: flex;
+    /* height: 50px;
+    width: 50px; */
+    align-items: right;
+    flex-direction: row;
+    text-align: center;
+    justify-content:center; 
+}
+.btn:hover{
+    background: linear-gradient( rgb(255, 198, 0), rgb(246, 84, 174));
+    transform: scale(1.01);
+}
+
+.card-holder{
+    display: flex;
+    height: calc(100%);
+    width: calc(100%);
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    justify-content:center; 
+
+}
+
+#svg-img{
+    width:calc(10%);
+    height:calc(5%);
+    padding:5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.player-thing{
+    display: flex;
+    height: calc(100%);
+    width: calc(100%);
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    justify-content:center; 
+}
+
+.choice{
+    width: 70%;
+}
+
+.chips{
+    height:100%;
+    width: 30%;
+}
+/* .bet{
+    height:100%;
+    width: 30%;
+    align-items: center;
+    text-align: end;
+    border-radius: 25%;
+
+} */
+
+/* #betButton{
+    justify-content: end;
+} */
+
+.betbtn{
+    border-radius: 40%;
+    justify-content: right;
+    background-image: linear-gradient(rgb(246, 84, 174), rgb(255, 198, 0)); 
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+.betbtn:hover{
+    cursor: pointer;
+    background: linear-gradient( rgb(255, 198, 0), rgb(246, 84, 174));
+    transform: scale(1.01);
+}
+.btn:disabled{
+    opacity: 0;
+}
+/* .btn{
+    display: flex;
+    height: calc(25%);
+    width: calc(25%);
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    justify-content:center; 
+} */
+
+
+/* .btn{
+    background-color: transparent;
+    border: solid;
+    border-radius: 50%;
+    border-color: black;
+    padding: 0;
+}
+ */
+.bet10{
+    display: flex;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-image: linear-gradient(rgb(246, 84, 174), rgb(255, 198, 0));   
+}
+/* stephen */
+#dealer-container{
+    display: grid;
+    position: relative;
+    height: calc(60%);
+}
+/* #card-deck-container{
+    width: 10%;
+    position: relative;
+} */
+#card-deck-image-1{
+    width:calc(20%);
+    height:calc(10%);
+}
+#card-deck-image-2{
+    width:calc(20%);
+    height:calc(10%);
+    position: absolute;
+    top: 0.5vw;
+    left: 0;
+}
+#card-deck-image-3{
+    width:calc(50%);
+    height:calc(50%);
+    position: absolute;
+    top: 1vw;
+    left: 0;
+}
+#card-deck-image-4{
+    width:calc(50%);
+    height:calc(50%);
+    position: absolute;
+    top: 1.5vw;
+    left: 0;
+}
+#card-deck-image-5{
+    width:calc(50%);
+    height:calc(50%);
+    position: absolute;
+    top: 2vw;
+    left: 0;
+}
+#card-deck-image-6{
+    width:calc(50%);
+    height:calc(50%);
+    position: absolute;
+    top: 2.5vw;
+    left: 0;
+    box-shadow: 6px 6px 10px black;
+    transition: transform 450ms;
+}
+#card-deck-image-6:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#player-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+}
+/* #player-bet{
+    width: 100%;
+    position: relative;
+}
+#player-hand-container{
+    width: 100%;
+    position: relative;
+}
+#player-cash{
+    width: 100%;
+    position: relative;
+} */
+
+#blackjack-board-container{
+    display: flex;
+    justify-content: center;
+}
+.player-cards{
+    width: 35%;
+    top: 0;
+    z-index: 1;
+}
+@keyframes dealing_card_1 {
+    0%{transform: translate(-335%, -150%) };
+    50%{transform: translate(-335%, -100%) };
+    100%{transform: translate(0, 0); opacity: 1; transform: rotate(-30deg);};
+}
+@keyframes dealing_card_2 {
+    0%{transform: translate(-350%, -150%)};
+    50%{transform: translate(-350%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1;transform: rotate(-27deg);};
+}
+@keyframes dealing_card_3 {
+    0%{transform: translate(-365%, -160%)};
+    50%{transform: translate(-365%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1; transform: rotate(-24deg);};
+}
+@keyframes dealing_card_4 {
+    0%{transform: translate(-380%, -190%)};
+    50%{transform: translate(-380%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1; transform: rotate(-21deg);};
+}
+@keyframes dealing_card_5 {
+    0%{transform: translate(-395%, -190%)};
+    50%{transform: translate(-395%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1; transform: rotate(-18deg);};
+}
+@keyframes dealing_card_6 {
+    0%{transform: translate(-420%, -190%)};
+    50%{transform: translate(-420%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1;};
+}
+@keyframes dealing_card_7 {
+    0%{transform: translate(-450%, -170%)};
+    50%{transform: translate(-450%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1; transform: rotate(9deg);};
+}
+@keyframes dealing_card_8 {
+    0%{transform: translate(-465%, -150%)};
+    50%{transform: translate(-465%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1; transform: rotate(12deg);};
+}
+@keyframes dealing_card_9 {
+    0%{transform: translate(-480%, -150%)};
+    50%{transform: translate(-480%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1; transform: rotate(15deg);};
+}
+@keyframes dealing_card_10 {
+    0%{transform: translate(-495%, -150%)};
+    50%{transform: translate(-495%, -100%)};
+    100%{transform: translate(0, 0); opacity: 1; transform: rotate(18deg);};
+}
+#dealt-card-1{
+    animation: dealing_card_1 forwards 1s ease-in-out;
+    width:10%;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#dealt-card-2{
+    animation: dealing_card_2 forwards 1s ease-in-out;
+    width: 10%;
+    /* position: absolute; */
+    top: -1.5vw;
+    left: 5%;
+    z-index: 1;
+}
+#dealt-card-3{
+    animation: dealing_card_3 forwards 1s ease-in-out;
+    width: 10%;
+    /* position: absolute; */
+    top: -3vw;
+    left: 10%;
+    z-index: 1;
+}
+#dealt-card-4{
+    animation: dealing_card_4 forwards 1s ease-in-out;
+    width: 10%;
+    /* position: absolute; */
+    top: -4.5vw;
+    left: 15%;
+    z-index: 1;
+}
+#dealt-card-5{
+    animation: dealing_card_5 forwards 1s ease-in-out;
+    width: 10%;
+    /* position: absolute; */
+    top: -6vw;
+    left: 20%;
+    z-index: 1;
+}
+#dealt-card-6{
+    animation: dealing_card_6 forwards 1s ease-in-out;
+    width: 10%;
+    /* position: absolute; */
+    top: -6vw;
+    left: 30%;
+    z-index: 1;
+}
+#dealt-card-7{
+    animation: dealing_card_7 forwards 1s ease-in-out;
+    width: 10%;
+    /* position: absolute; */
+    top: -4.5vw;
+    left: 40%;
+    z-index: 1;
+    transform: rotate(9deg);
+}
+#dealt-card-8{
+    animation: dealing_card_8 forwards 1s ease-in-out;
+    width: 10%;
+    /* position: absolute; */
+    top: -3vw;
+    left: 45%;
+    z-index: 1;
+}
+#dealt-card-9{
+    animation: dealing_card_9 forwards 1s ease-in-out;
+    width: 10%;
+    /* position: absolute; */
+    top: -1.5vw;
+    left: 50%;
+    z-index: 1;
+}
+#dealt-card-10{
+    animation: dealing_card_10 forwards 1s ease-in-out;
+    width: 10%;
+   /* position: absolute; */
+    top: 0;
+    left: 55%;
+    z-index: 1;
+}
+#player-container{
+    margin-top: 10vh;
+    margin-left: 10vw;
+}
+.text{
+    color: aliceblue;
+}

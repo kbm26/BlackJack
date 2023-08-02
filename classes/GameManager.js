@@ -9,10 +9,10 @@ const betButton = document.getElementById('betButton')
 const standButton = document.getElementById('standButton')
 const bankAmount = document.getElementById('bankAmount')
 const pot = document.getElementById('pot')
-const chipTen = document.getElementById('10')
-const chipTwenty = document.getElementById('20')
-const chipFifty = document.getElementById('50')
-const chipHundred = document.getElementById('100')
+const chipTen = document.getElementById('bet10')
+const chipTwenty = document.getElementById('bet20')
+const chipFifty = document.getElementById('bet50')
+const chipHundred = document.getElementById('bet100')
 const playerHand = document.getElementById('playerHand')
 const dealerHand = document.getElementById('dealerHand')
 
@@ -21,39 +21,42 @@ const dealerHand = document.getElementById('dealerHand')
 
 const dealer = new Dealer();
 const user_player = new UserPlayer("UNNAMED")
-const deck = new Deck();
+let deck = new Deck();
 
 bankAmount.textContent = user_player.getBalance()
 pot.textContent = user_player.getTotalValueOfHand()
 
 
-function kyle(){
-    alert("i work")
-}
 
 function deal_initial_cards(){
     dealer.dealCard(deck, user_player);
     dealer.dealCard(deck, dealer);
-    dealerHand.textContent = dealer.getTotalValueOfHand()
     dealer.dealCard(deck, user_player);
     dealer.dealCard(deck, dealer);
     playerHand.textContent = user_player.getTotalValueOfHand();
+    dealerHand.textContent = dealer.getTotalValueOfHand();
 
 }
 
 function dealerTurn(){
-    alert("im going to break")
-
     while(dealer.getTotalValueOfHand()<17){
         dealer.dealCard(deck,dealer)
-        console.log(dealer.getTotalValueOfHand())
+    }
+    if(dealer.getTotalValueOfHand()>21){
+        alert("DEALER BUST")
     }
     dealerHand.textContent = dealer.getTotalValueOfHand()
-
 }
 
+
 function result(){
-    if(user_player.getTotalValueOfHand()>dealer.getTotalValueOfHand()){
+    if (user_player.hasBust()){
+        alert("YOU BUST")
+    }
+    else if(dealer.hasBust()){
+        alert("DEALER BUST")
+    }
+    else if(user_player.getTotalValueOfHand()>dealer.getTotalValueOfHand()){
         alert("YOU WON")
     }
     else if(user_player.getTotalValueOfHand()==dealer.getTotalValueOfHand()){
@@ -62,7 +65,7 @@ function result(){
     else{
         alert("YOU LOST")
     }
-    GameReset()
+    
 }
 
 function GameReset(){
@@ -78,7 +81,10 @@ function GameReset(){
     dealer.resetHand()
     playerHand.textContent = user_player.getTotalValueOfHand();
     dealerHand.textContent = dealer.getTotalValueOfHand();
-
+    pot.textContent= user_player.getPot()
+    [...document.getElementsByClassName("dealers-cards")].map(n => n && n.remove());
+    [...document.getElementsByClassName("player-cards")].map(n => n && n.remove());
+    deck = new Deck()
 }
 
 function Game(){
@@ -105,7 +111,9 @@ function MakeBet(num){
 standButton.addEventListener('click',()=>{
     user_player.stand();
     dealerTurn()
-    result()
+    setTimeout(result,5)
+    setTimeout(GameReset,5)
+    
 })
 
 betButton.addEventListener('click',Game)
@@ -114,9 +122,11 @@ hitButton.addEventListener('click',()=>{
     dealer.dealCard(deck,user_player)
     playerHand.textContent = user_player.getTotalValueOfHand();
     if(user_player.getTotalValueOfHand()>21){
-        alert("BUST")
-        GameReset()
+        alert("YOU BUST")
+        GameReset();
+        
     }
+
     
 
 })

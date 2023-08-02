@@ -2,27 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BlackJack</title>
     <link rel="StyleSheet" href="style.css">
     <script type="module" src="../dist/bundle.js" ></script>
 
 </head>
 <body>
-    <button id="hitButton" disabled>HITBUTTON</button>
-    <button id="standButton" disabled>STANDBUTTON</button>
-    <button id="betButton">BETBUTTON</button>
-    <button id="10">10 </button>
-    <button id="20">20 </button>
-    <button id="50">50 </button>
-    <button id="100">100 </button>
-    <p1>
-        Bank: <var id="bankAmount"></var>
-    </p1> 
-    <p1>
-        Pot: <var id="pot"></var>
-    </p1>
-    <p1>Player: <var id="playerHand"></var></p1>
-    <p1>Dealer: <var id="dealerHand"></var></p1>
+    <header class="header-inner">        
+            <div id="logoContain">
+                <h1 id="logo">BLACKJACK</h1>   
+            </div>
+            <div id="bankContain">
+                <p1 class="text"id="Bank">Bank: <var class="text"id="bankAmount"></var>
+            </div>
+    </header>
+    <div class="card-holder" id="card-holder">
+    </div>
+    <div class="player-thing">
+        <div class="choice">
+            <button class="btn" id="hitButton" disabled>HIT</button>
+            <button class="btn" id="standButton" disabled>STAND</button>
+        </div>
+        <div class="bet">
+            <button class="betbtn" id="betButton">BET</button>
+        </div>
+        <div class="chips">
+            <button class="btn" id="bet10">10</button>
+            <button class="btn" id="bet20">20</button>
+            <button class="btn" id="bet50">50</button>
+            <button class="btn" id="bet100">100</button>
+        </div>
+    </div>
+    <div id="blackjack-board-container">
+        <img id="blackjack-board-image">
+    </div>
+    <div id="player-container">
+        <p1 class="text">Pot: <var class="text" id="pot"></var></p1>
+        <p1 class="text">Player: <var class="text" id="playerHand"></var></p1>
+        <p1 class="text">Dealer: <var class="text" id="dealerHand"></var></p1>
+    </div>
+    
 </body>
 </html>
