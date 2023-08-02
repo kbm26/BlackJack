@@ -28,9 +28,6 @@ bankAmount.textContent = user_player.getBalance()
 pot.textContent = user_player.getTotalValueOfHand()
 
 
-function kyle(){
-    alert("i work")
-}
 
 function deal_initial_cards(){
     dealer.dealCard(deck, user_player);
@@ -137,4 +134,4 @@ chipHundred.addEventListener('click',()=>{
     MakeBet(100)
 })
 
-player_hand_container.addEventListener("click", add_card);
+// player_hand_container.addEventListener("click", add_card);

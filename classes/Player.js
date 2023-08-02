@@ -1,3 +1,6 @@
+const addCard = require('../classes/animation').add_card;
+
+
 class Player{
 
     /*
@@ -66,8 +69,8 @@ class UserPlayer extends Player{
         return this.balance;
     }
 
-    showHand(){
-        //The cards displayed to the user
+    showHand(card){
+        addCard(card,this.hand.length)
     }
 
 
@@ -85,11 +88,18 @@ class Dealer extends Player{
         this.name = "DEALER";
     }
 
-    showHand(){
+    showHand(cardName){
         //Show a single card to the player
         this.hand.forEach(element => {
             console.log(element)
         });
+        // let card = document.createElement("img");
+        // const dealerHand = document.getElementById("card-holder")
+        // card.src = `../assets/${cardName}.svg`;
+        // card.classList.add("card-holder")
+        // card.setAttribute("id", `svg-img`)
+        // dealerHand.appendChild(card);
+
     }
 
     getName(){
@@ -101,7 +111,8 @@ class Dealer extends Player{
         this.card = deck.take_card();
         player.hit(this.card);
         console.log(`${this.card.get_card_name()} of ${this.card.get_suit()} was removed from the Deck\nThere are ${deck.get_card_count()} Cards in the Deck`);
-        alert(`${this.card.get_card_name()}${this.card.get_suit()}`)
+        let cardName = `${this.card.get_card_name()}${this.card.get_suit()}`
+        player.showHand(cardName)
     }
 
 

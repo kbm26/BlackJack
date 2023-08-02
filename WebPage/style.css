@@ -85,8 +85,8 @@ body{
 }
 
 #svg-img{
-    width:calc(20%);
-    height:calc(10%);
+    width:calc(10%);
+    height:calc(5%);
     padding:5px;
     align-items: center;
     text-align: center;
@@ -160,13 +160,13 @@ body{
     position: relative;
     height: calc(60%);
 }
-#card-deck-container{
+/* #card-deck-container{
     width: 10%;
     position: relative;
-}
+} */
 #card-deck-image-1{
-    width:calc(50%);
-    height:calc(50%);
+    width:calc(20%);
+    height:calc(10%);
 }
 #card-deck-image-2{
     width:calc(20%);
@@ -215,7 +215,7 @@ body{
     grid-template-columns: 30% 30% 30%;
     justify-content: center;
 }
-#player-bet{
+/* #player-bet{
     width: 100%;
     position: relative;
 }
@@ -226,7 +226,7 @@ body{
 #player-cash{
     width: 100%;
     position: relative;
-}
+} */
 .player-cards{
     width: 35%;
     position: absolute;
@@ -285,8 +285,7 @@ body{
 }
 #dealt-card-1{
     animation: dealing_card_1 forwards 1s ease-in-out;
-    width:calc(20%);
-    height:calc(10%);
+    width:10%;
     position: absolute;
     top: 0;
     left: 0;
@@ -294,7 +293,7 @@ body{
 }
 #dealt-card-2{
     animation: dealing_card_2 forwards 1s ease-in-out;
-    width: 35%;
+    width: 10%;
     position: absolute;
     top: -1.5vw;
     left: 5%;
