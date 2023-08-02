@@ -15,7 +15,6 @@ const chipFifty = document.getElementById('bet50')
 const chipHundred = document.getElementById('bet100')
 const playerHand = document.getElementById('playerHand')
 const dealerHand = document.getElementById('dealerHand')
-const resultWindow = document.getElementById('pop')
 
 
 
@@ -82,6 +81,7 @@ function GameReset(){
     dealer.resetHand()
     playerHand.textContent = user_player.getTotalValueOfHand();
     dealerHand.textContent = dealer.getTotalValueOfHand();
+    pot.textContent= user_player.getPot()
     [...document.getElementsByClassName("dealers-cards")].map(n => n && n.remove());
     [...document.getElementsByClassName("player-cards")].map(n => n && n.remove());
     deck = new Deck()

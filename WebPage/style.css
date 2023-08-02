@@ -56,13 +56,13 @@ body{
     cursor: pointer;
     position: relative;
     color: #000;
-    /* border-radius: 50%;
-    background-image: linear-gradient(rgb(246, 84, 174), rgb(255, 198, 0)); */
+    border-radius: 40%;
+    background-image: linear-gradient(rgb(246, 84, 174), rgb(255, 198, 0)); 
+    height: 50px;
+    width: 50px;
+    display: flex;
     /* height: 50px;
     width: 50px; */
-    display: flex;
-    height: calc(25%);
-    width: calc(25%);
     align-items: right;
     flex-direction: row;
     text-align: center;
@@ -112,22 +112,35 @@ body{
     height:100%;
     width: 30%;
 }
-.bet{
+/* .bet{
     height:100%;
     width: 30%;
     align-items: center;
     text-align: end;
-}
+    border-radius: 25%;
+
+} */
 
 /* #betButton{
     justify-content: end;
 } */
 
 .betbtn{
+    border-radius: 40%;
     justify-content: right;
-
+    background-image: linear-gradient(rgb(246, 84, 174), rgb(255, 198, 0)); 
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
 }
-
+.betbtn:hover{
+    cursor: pointer;
+    background: linear-gradient( rgb(255, 198, 0), rgb(246, 84, 174));
+    transform: scale(1.01);
+}
+.btn:disabled{
+    opacity: 0;
+}
 /* .btn{
     display: flex;
     height: calc(25%);
