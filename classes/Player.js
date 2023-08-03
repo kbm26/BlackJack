@@ -93,12 +93,12 @@ class Dealer extends Player{
         this.hand.forEach(element => {
             console.log(element)
         });
-        // let card = document.createElement("img");
-        // const dealerHand = document.getElementById("card-holder")
-        // card.src = `../assets/${cardName}.svg`;
-        // card.classList.add("card-holder")
-        // card.setAttribute("id", `svg-img`)
-        // dealerHand.appendChild(card);
+        let card = document.createElement("img");
+        const dealerHand = document.getElementById("card-holder")
+        card.src = `../assets/${cardName}.svg`;
+        card.classList.add("card-holder")
+        card.setAttribute("id", `svg-img`)
+        dealerHand.appendChild(card);
 
     }
 

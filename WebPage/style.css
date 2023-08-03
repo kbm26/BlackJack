@@ -229,7 +229,6 @@ body{
 } */
 .player-cards{
     width: 35%;
-    position: absolute;
     top: 0;
     z-index: 1;
 }
@@ -283,58 +282,61 @@ body{
     50%{transform: translate(-495%, -100%)};
     100%{transform: translate(0, 0); opacity: 1; transform: rotate(18deg);};
 }
+#blackjack-board-container{
+    margin-left: 30vw;
+}
 #dealt-card-1{
     animation: dealing_card_1 forwards 1s ease-in-out;
     width:10%;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
-    left: 0;
-    z-index: 1;
+     left: 0;
+    z-index: 1; 
 }
 #dealt-card-2{
     animation: dealing_card_2 forwards 1s ease-in-out;
     width: 10%;
-    position: absolute;
+    /* position: absolute; */
     top: -1.5vw;
     left: 5%;
     z-index: 1;
 }
 #dealt-card-3{
     animation: dealing_card_3 forwards 1s ease-in-out;
-    width: 35%;
-    position: absolute;
+    width: 10%;
+    /* position: absolute; */
     top: -3vw;
     left: 10%;
     z-index: 1;
 }
 #dealt-card-4{
     animation: dealing_card_4 forwards 1s ease-in-out;
-    width: 35%;
-    position: absolute;
+    width: 10%;
+    /* position: absolute; */
     top: -4.5vw;
     left: 15%;
     z-index: 1;
 }
 #dealt-card-5{
     animation: dealing_card_5 forwards 1s ease-in-out;
-    width: 35%;
-    position: absolute;
+    width: 10%;
+    /* position: absolute; */
     top: -6vw;
     left: 20%;
     z-index: 1;
 }
 #dealt-card-6{
     animation: dealing_card_6 forwards 1s ease-in-out;
-    width: 35%;
-    position: absolute;
+    width: 10%;
+    /* position: absolute; */
     top: -6vw;
     left: 30%;
     z-index: 1;
 }
 #dealt-card-7{
     animation: dealing_card_7 forwards 1s ease-in-out;
-    width: 35%;
-    position: absolute;
+    width: 10%;
+    /* position: absolute; */
     top: -4.5vw;
     left: 40%;
     z-index: 1;
@@ -342,25 +344,24 @@ body{
 }
 #dealt-card-8{
     animation: dealing_card_8 forwards 1s ease-in-out;
-    width: 35%;
-    position: absolute;
+    width: 10%;
+    /* position: absolute; */
     top: -3vw;
     left: 45%;
     z-index: 1;
 }
 #dealt-card-9{
     animation: dealing_card_9 forwards 1s ease-in-out;
-    width: 35%;
-    position: absolute;
+    width: 10%;
+    /* position: absolute; */
     top: -1.5vw;
     left: 50%;
     z-index: 1;
 }
 #dealt-card-10{
     animation: dealing_card_10 forwards 1s ease-in-out;
-    width:calc(20%);
-    height:calc(10%);
-    position: absolute;
+    width: 10%;
+    /* position: absolute; */
     top: 0;
     left: 55%;
     z-index: 1;
